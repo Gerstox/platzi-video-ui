@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/karim-master.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap" rel="stylesheet">
+    <title>Carousel</title>
+</head>
+<style>
+  body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+  }
+  .carousel {
+      width: 100%;
+      overflow: scroll;
+      padding: 0 2rem;
+      position: relative;
+  }
+  .carousel__container {
+      white-space: nowrap;
+      margin: 70px 0;
+      padding-bottom: 1rem;
+  }
+  .carousel-item {
+      width: 200px;
+      height: 250px;
+      border-radius: 20px;
+      background-color: violet;
+      overflow: hidden;
+      margin-right: 1rem;
+      display: inline-block;
+      cursor: pointer;
+      transition: 450ms all;
+      transform-origin: center left;
+      position: relative;
+  }
+  .carousel-item:hover ~ .carousel-item {
+      /* transform: translate3d(100px, 0, 0); */
+  }
+  .carousel__container:hover .carousel-item {
+      opacity: 0.3;
+  }
+  .carousel__container:hover .carousel-item:hover {
+      transform: scale(1.5);
+      opacity: 1;
+      z-index: 1;
+  }
+  .carousel-item__img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+  }
+  .carousel-item__details {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      font-size: 1rem;
+      opacity: 1;
+      color: white;
+      font-weight: bold;
+      transition: 450ms opacity;
+      padding: 1rem;
+      position: absolute;
+      bottom: 0;
+  }
+  .carousel-item__details img {
+      width: 30px;
+  }
+  .carousel-item__details p {
+      margin: 0;
+      white-space: normal;
+  }
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://as.com/meristation/imagenes/2019/11/07/noticias/1573103108_028146_1573103155_noticia_normal.jpg" alt="Casa del maestro Roshi">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Casa del maestro Roshi</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://depor.com/resizer/heBf3kYib69_wQFyeRTzjhZbLd8=/620x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/D2WYUZOQ4ZHDXGOIYAO6FCTXK4.jpg" alt="Templo sagrado de Kamisama">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Templo sagrado de Kamisama</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/71B8RkAuQVL._SL1500_.jpg" alt="Planeta Namek">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Planeta Namek</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://d.wattpad.com/story_parts/761621525/images/15b3d327f8a20819329680511038.jpg" alt="Templo de Beerus">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Templo de Beerus</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://backgrounddownload.com/wp-content/uploads/2018/09/tournament-of-power-background-3.jpg" alt="Torneo del Poder">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Torneo del Poder</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://img.fayerwayer.com/sites/9/2020/12/05/template6-5a82d8a74a5441d6f642108ba8e353f6-1200x600.jpg" alt="Torneo de artes marciales">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./assets/img/play-icon.png" alt="Play">
+                        <img src="./assets/img/plus-icon.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">Torneo de artes marciales</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
